@@ -149,10 +149,60 @@ function Navbar() {
                             </DropdownButton>
 
                         </a>
+                        <a href='#' className='text-black text-decoration-none'>
+
+                            <DropdownButton className='w-100' variant="light" id="dropdown-basic-button" title=" Pots">
+                                <Dropdown.Item className="mega-menu d-flex flex-row p-5 w-100">
+
+                                    <h3 className='col-4'>All Plants</h3>
+
+                                    <ul className='col-4'>
+                                        <li>İndoor Plants<BsArrowRightCircle /> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        </li>
+                                        <li>Outdoor Plants <BsArrowRightCircle /> </li>
+                                        <li>New In</li>
+                                        <li>Plants Bundles</li>
+                                    </ul>
+
+                                    <div className="col-4 p-5 ">
+                                        <div className="row">
+                                            <img className="w-100 rounded-circle" src={snake} />
+
+                                        </div>
+                                    </div>
+                                </Dropdown.Item>
+                            </DropdownButton>
+
+                        </a>
+                        <a href='#' className='text-black text-decoration-none'>
+
+                            <DropdownButton className='w-100' variant="light" id="dropdown-basic-button" title=" PlantCare">
+                                <Dropdown.Item className="mega-menu d-flex flex-row p-5 w-100">
+
+                                    <h3 className='col-4'>All Plants</h3>
+
+                                    <ul className='col-4'>
+                                        <li>İndoor Plants<BsArrowRightCircle /> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        </li>
+                                        <li>Outdoor Plants <BsArrowRightCircle /> </li>
+                                        <li>New In</li>
+                                        <li>Plants Bundles</li>
+                                    </ul>
+
+                                    <div className="col-4 p-5 ">
+                                        <div className="row">
+                                            <img className="w-100 rounded-circle" src={snake} />
+
+                                        </div>
+                                    </div>
+                                </Dropdown.Item>
+                            </DropdownButton>
+
+                        </a>
 
 
 
-                        <a href='#' className='text-black text-decoration-none '>
+                        {/* <a href='#' className='text-black text-decoration-none '>
                             <DropdownButton className='w-full' variant="light" id="dropdown-basic-button" title="Pots">
                                 <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                                 <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -168,7 +218,7 @@ function Navbar() {
                             </DropdownButton>
 
 
-                        </a>
+                        </a> */}
                     </div>
 
 

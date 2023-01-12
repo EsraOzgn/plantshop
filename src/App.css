@@ -1,7 +1,7 @@
 .nav-container {
     font-family: 'EB Garamond', serif;
     font-size: xx-large;
-    color: #819298;
+    color: green;
 }
 
 .footer-container {
@@ -11,4 +11,7 @@
 
 .mega-menu {
     background-color: #A3B4A1 !important;
+}
+.text {
+    font-family: 'EB Garamond', serif;
 }
