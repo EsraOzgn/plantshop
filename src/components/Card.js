@@ -22,8 +22,6 @@ function Card() {
                         <p className='border border-black d-flex align-items-center p-5'>Decorate your home for Christmas
                             Pop Clancy the aglaonema on a shelf and his bright red leaves will draw your eye up and around the room. He'll fit right in with your holiday decorations. Nina the fittonia will add a touch of frosting to your mantlepiece, or choose Florence the white anthurium for a classic snowy look.
                             Shop the look below.  <Button className='btn btn-success'>lorem</Button>
-
-
                             <br></br>
                             <br></br>
                             <br></br>
@@ -34,8 +32,6 @@ function Card() {
                             <br></br>
                             <br></br>
                             <br></br>
-
-
                         </p>
                     </div>
                 </div>

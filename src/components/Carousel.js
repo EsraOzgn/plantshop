@@ -35,9 +35,9 @@ function Carousel() {
                 <img className="w-75 rounded" src={pachira}></img>
                 <img className="w-75 rounded" src={pachira}></img>
                 <img className="w-75 rounded" src={pachira}></img>
-
-
             </Slide>
+
+            <br></br>
 
 
         </div>

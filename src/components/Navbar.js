@@ -1,36 +1,32 @@
-import React from 'react'
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { Button } from 'react-bootstrap'
 import { SlBasket } from 'react-icons/sl'
 import { IoMdHeartEmpty } from 'react-icons/io'
 import { HiOutlineUserCircle } from 'react-icons/hi'
 import { RiSearchLine } from 'react-icons/ri'
 import { BsArrowRightCircle } from 'react-icons/bs'
+import { TiSocialFacebookCircular } from 'react-icons/ti'
+import { SlClose } from 'react-icons/sl'
+
 
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import snake from './images/snake.png'
+import { Button } from 'react-bootstrap';
+// import React, { useState } from "react";
+import cardd from './images/cardd.jpg'
+import { TfiCheckBox } from 'react-icons/tfi';
 
-
-
-// import { useState, useRef } from 'react';
-// import Button from 'react-bootstrap/Button';
-// import Overlay from 'react-bootstrap/Overlay';
-// import Popover from 'react-bootstrap/Popover';
 
 
 function Navbar() {
 
+    const [modal, setModal] = useState(false)
 
-    // const [show, setShow] = useState(false);
-    // const [target, setTarget] = useState(null);
-    // const ref = useRef(null);
-
-    // const handleClick = (event) => {
-    //     setShow(!show);
-    //     setTarget(event.target);
-    // };
+    const toggleModal = () => {
+        setModal(!modal);
+    };
 
 
     return (
@@ -42,86 +38,6 @@ function Navbar() {
 
                     <div className="d-flex flex-row justify-content-evenly text-dark bg-opacity-25 col-5">
                         {/* <a href='#' className='text-black text-decoration-none' >Home</a> */}
-
-
-                        {/* <div ref={ref}>
-                            <div className='btn' onClick={handleClick}>Plants</div>
-
-                            <Overlay
-                                show={show}
-                                target={target}
-                                placement="bottom"
-                                container={ref}
-                                containerPadding={20}
-                            > */}
-                        {/* <Popover id="popover-contained"> */}
-                        {/* <Popover.Header as="h3">Popover bottom</Popover.Header> */}
-                        {/* <Popover.Body>
-                                        <ul>
-                                            <li>İndoor Plants <BsArrowRightCircle /> </li>
-                                            <li>Outdoor Plants <BsArrowRightCircle /> </li>
-                                            <li>New In</li>
-                                            <li>Plants Bundles</li>
-                                        </ul>
-                                    </Popover.Body>
-                                </Popover>
-                            </Overlay>
-                        </div> */}
-
-                        {/* 
-                        <div ref={ref}>
-                            <div className='btn' onClick={handleClick}>Pots</div>
-
-                            <Overlay className="border border-primary"
-                                show={show}
-                                target={target}
-                                placement="bottom"
-                                container={ref}
-                                containerPadding={20}
-                            > */}
-                        {/* <Popover className="border border-primary" id="popover-contained"> */}
-                        {/* <Popover.Header as="h3">Popover bottom</Popover.Header> */}
-                        {/* <Popover.Body>
-                                        <ul>
-                                            <li>İndoor Plants <BsArrowRightCircle /> </li>
-                                            <li>Outdoor Plants <BsArrowRightCircle /> </li>
-                                            <li>New In</li>
-                                            <li>Plants Bundles</li>
-                                        </ul>
-                                    </Popover.Body>
-                                </Popover>
-                            </Overlay>
-                        </div>
-
-
-
-                        <div ref={ref}>
-                            <div className='btn' onClick={handleClick}>PlantCare</div>
-
-                            <Overlay
-                                show={show}
-                                target={target}
-                                placement="bottom"
-                                container={ref}
-                                containerPadding={20}
-                            > */}
-                        {/* <Popover id="popover-contained"> */}
-                        {/* <Popover.Header as="h3">Popover bottom</Popover.Header> */}
-                        {/* <Popover.Body>
-                                        <ul>
-                                            <li>İndoor Plants <BsArrowRightCircle /> </li>
-                                            <li>Outdoor Plants <BsArrowRightCircle /> </li>
-                                            <li>New In</li>
-                                            <li>Plants Bundles</li>
-                                        </ul>
-                                    </Popover.Body>
-                                </Popover>
-                            </Overlay>
-                        </div> */}
-
-
-
-
 
 
                         <a href='#' className='text-black text-decoration-none'>
@@ -199,28 +115,7 @@ function Navbar() {
                             </DropdownButton>
 
                         </a>
-
-
-
-                        {/* <a href='#' className='text-black text-decoration-none '>
-                            <DropdownButton className='w-full' variant="light" id="dropdown-basic-button" title="Pots">
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                            </DropdownButton>
-
-                        </a>
-                        <a href='#' className='text-black text-decoration-none'>
-                            <DropdownButton variant="light" id="dropdown-basic-button" title=" PlantCare">
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                            </DropdownButton>
-
-
-                        </a> */}
                     </div>
-
 
                     <div className='d-flex justify-content-end text-dark bg-opacity-25 col-3'>
                         <a className="text-black " href="#"> <RiSearchLine size={20} /> </a>
@@ -232,8 +127,107 @@ function Navbar() {
 
                         <a className="text-black " href="#"> <IoMdHeartEmpty size={20} /> </a>
 
-                        <a className="text-black " href="#"> <HiOutlineUserCircle size={25} /> </a>
+                        {/* <a className="text-black " href="#"> <HiOutlineUserCircle size={25} /> </a> */}
+                        <Button onClick={toggleModal} className="btn-modal bg-light text-decoration-none text-black"> Sign In </Button>
                     </div>
+
+
+                    {/* Modal */}
+
+                    {modal && (
+                        <div className={modal ? "active-modal" : "modal"}>
+                            <div onClick={toggleModal} className="overlay"></div>
+                            <div className="modal-content">
+                                <div className="logo-component">
+                                    <div className="logo border border-danger rounded bg-white" >
+
+
+                                        <div className="logo-left rounded border border-primary">
+
+                                            <div className="login-form">
+                                                <form action="" className="form">
+
+                                                    <div className="form-group">
+                                                        <input id="first" className="form-input" type="text" placeholder="Your name?"></input>
+                                                    </div>
+
+                                                    <div className="form-group">
+                                                        <input id="last" className="form-input" type="text" placeholder="Your email"></input>
+                                                    </div>
+
+                                                    <div className="form-group">
+                                                        <input id="color" className="form-input" type="password" placeholder="Password"></input>
+                                                    </div>
+
+                                                    <div className="form-group">
+                                                        <input id="color" className="form-input" type="password" placeholder="Repeat your password"></input>
+                                                    </div>
+
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            I agree all statements in <a href="#"> Terms of service</a>
+
+                                                        </label>
+                                                    </div>
+
+                                                    <Button className='btn btn-success'>Register</Button>
+
+                                                </form>
+                                            </div>
+
+
+                                            {/* <div className="logo-left-header">
+
+                                                <h1>Sign Up</h1>
+
+                                            </div>
+                                            <div className="input-side">
+                                                <div className="email">
+
+
+                                                </div>
+                                                <div className="password">
+
+
+                                                </div>
+                                                <div className="logo-info">
+
+
+                                                </div>
+                                            </div>
+                                            <div className="login-left-buttons">
+                                                <div className="logo-left-login">
+
+
+                                                </div>
+
+                                                <div className="login-left-register ">
+
+                                                </div>
+
+
+                                            </div> */}
+
+                                        </div>
+
+
+
+
+                                        {/* <div className="logo-right rounded border border-danger">
+                                            <div className="logo-right-logo">
+                                                <img className="img-fluid rounded" src={cardd}></img>
+                                            </div>
+                                        </div> */}
+
+
+                                    </div>
+
+                                </div>
+                                <button className="close-modal" onClick={toggleModal}><SlClose color='gray' /> </button>
+                            </div>
+                        </div>
+                    )}
 
                 </div>
             </div>
