@@ -2,10 +2,10 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { SlBasket } from 'react-icons/sl'
 import { IoMdHeartEmpty } from 'react-icons/io'
-import { HiOutlineUserCircle } from 'react-icons/hi'
+// import { HiOutlineUserCircle } from 'react-icons/hi'
 import { RiSearchLine } from 'react-icons/ri'
 import { BsArrowRightCircle } from 'react-icons/bs'
-import { TiSocialFacebookCircular } from 'react-icons/ti'
+// import { TiSocialFacebookCircular } from 'react-icons/ti'
 import { SlClose } from 'react-icons/sl'
 
 
@@ -14,9 +14,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import snake from './images/snake.png'
 import { Button } from 'react-bootstrap';
-// import React, { useState } from "react";
-import cardd from './images/cardd.jpg'
-import { TfiCheckBox } from 'react-icons/tfi';
+// import cardd from './images/cardd.jpg'
+// import { TfiCheckBox } from 'react-icons/tfi';
 
 
 
@@ -139,16 +138,16 @@ function Navbar() {
                             <div onClick={toggleModal} className="overlay"></div>
                             <div className="modal-content">
                                 <div className="logo-component">
-                                    <div className="logo border border-danger rounded bg-white" >
+                                    <div className="logo rounded bg-white" >
 
 
-                                        <div className="logo-left rounded border border-primary">
-
+                                        <div className="logo-left rounded">
+                                            <h3 className='signup text-black'>Sign Up</h3>
                                             <div className="login-form">
                                                 <form action="" className="form">
 
                                                     <div className="form-group">
-                                                        <input id="first" className="form-input" type="text" placeholder="Your name?"></input>
+                                                        <input id="first" className="form-input" type="text" placeholder="Your name"></input>
                                                     </div>
 
                                                     <div className="form-group">
@@ -164,54 +163,19 @@ function Navbar() {
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                            I agree all statements in <a href="#"> Terms of service</a>
+                                                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
+                                                        <label className="form-check-label" for="flexCheckDefault">
+                                                            I agree all statements in <a className='terms' href="#"> Terms of service</a>
 
                                                         </label>
                                                     </div>
 
-                                                    <Button className='btn btn-success'>Register</Button>
+                                                    <Button className='btn btn-warning'>Register</Button>
 
                                                 </form>
                                             </div>
 
-
-                                            {/* <div className="logo-left-header">
-
-                                                <h1>Sign Up</h1>
-
-                                            </div>
-                                            <div className="input-side">
-                                                <div className="email">
-
-
-                                                </div>
-                                                <div className="password">
-
-
-                                                </div>
-                                                <div className="logo-info">
-
-
-                                                </div>
-                                            </div>
-                                            <div className="login-left-buttons">
-                                                <div className="logo-left-login">
-
-
-                                                </div>
-
-                                                <div className="login-left-register ">
-
-                                                </div>
-
-
-                                            </div> */}
-
                                         </div>
-
-
 
 
                                         {/* <div className="logo-right rounded border border-danger">
@@ -224,7 +188,7 @@ function Navbar() {
                                     </div>
 
                                 </div>
-                                <button className="close-modal" onClick={toggleModal}><SlClose color='gray' /> </button>
+                                <button className="close-modal" onClick={toggleModal}><SlClose color='gray' size={20} /> </button>
                             </div>
                         </div>
                     )}
